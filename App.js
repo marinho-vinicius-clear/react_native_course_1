@@ -20,48 +20,48 @@ class App extends Component {
       feed: [
         {
           id: '1', 
-          nome: 'Lucas Silva', 
-          descricao: 'Mais um dia de muitos bugs :)', 
-          imgperfil: 'https://sujeitoprogramador.com/instareact/fotoPerfil1.png', 
-          imgPublicacao: 'https://sujeitoprogramador.com/instareact/foto1.png',  
-          likeada: false, 
-          likers: 0
+          name: 'Lucas Silva', 
+          description: 'Mais um dia de muitos bugs :)', 
+          profileImg: 'https://sujeitoprogramador.com/instareact/fotoPerfil1.png', 
+          postImg: 'https://sujeitoprogramador.com/instareact/foto1.png',  
+          liked: false, 
+          likes: 0
          },
         {
           id: '2', 
-          nome: 'Matheus', 
-          descricao: 'Isso sim é ser raiz!!!!!', 
-          imgperfil: 'https://sujeitoprogramador.com/instareact/fotoPerfil2.png', 
-          imgPublicacao: 'https://sujeitoprogramador.com/instareact/foto2.png', 
-          likeada: false, 
-          likers: 0
+          name: 'Matheus', 
+          description: 'Isso sim é ser raiz!!!!!', 
+          profileImg: 'https://sujeitoprogramador.com/instareact/fotoPerfil2.png', 
+          postImg: 'https://sujeitoprogramador.com/instareact/foto2.png', 
+          liked: false, 
+          likes: 0
         },
         {
           id: '3', 
-          nome: 'Jose Augusto', 
-          descricao: 'Bora trabalhar Haha', 
-          imgperfil: 'https://sujeitoprogramador.com/instareact/fotoPerfil3.png', 
-          imgPublicacao: 'https://sujeitoprogramador.com/instareact/foto3.png',  
-          likeada: false, 
-          likers: 3
+          name: 'Jose Augusto', 
+          description: 'Bora trabalhar Haha', 
+          profileImg: 'https://sujeitoprogramador.com/instareact/fotoPerfil3.png', 
+          postImg: 'https://sujeitoprogramador.com/instareact/foto3.png',  
+          liked: false, 
+          likes: 3
         },
         {
           id: '4', 
-          nome: 'Gustavo Henrique', 
-          descricao: 'Isso sim que é TI!', 
-          imgperfil: 'https://sujeitoprogramador.com/instareact/fotoPerfil1.png', 
-          imgPublicacao: 'https://sujeitoprogramador.com/instareact/foto4.png', 
-          likeada: false, 
-          likers: 1
+          name: 'Gustavo Henrique', 
+          description: 'Isso sim que é TI!', 
+          profileImg: 'https://sujeitoprogramador.com/instareact/fotoPerfil1.png', 
+          postImg: 'https://sujeitoprogramador.com/instareact/foto4.png', 
+          liked: false, 
+          likes: 1
         },
         {
           id: '5', 
-          nome: 'Guilherme', 
-          descricao: 'Boa tarde galera do insta...', 
-          imgperfil: 'https://sujeitoprogramador.com/instareact/fotoPerfil2.png', 
-          imgPublicacao: 'https://sujeitoprogramador.com/instareact/foto5.png',
-          likeada: false, 
-          likers: 32
+          name: 'Guilherme', 
+          description: 'Boa tarde galera do insta...', 
+          profileImg: 'https://sujeitoprogramador.com/instareact/fotoPerfil2.png', 
+          postImg: 'https://sujeitoprogramador.com/instareact/foto5.png',
+          liked: false, 
+          likes: 32
         }
       ]
      };
@@ -90,6 +90,7 @@ class App extends Component {
 
       <FlatList
       showsHorizontalScrollIndicator={false}
+      keyExtractor={(item) => item.id}
       data={this.state.feed}
       renderItem={ ({item}) => <Lista data={item} /> }
       />
