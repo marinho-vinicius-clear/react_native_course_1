@@ -7,7 +7,8 @@ import { AuthContext } from '../../contexts/auth';
 
 import Header from '../../components/Header';
 import { Background, Input, SubmitButton, SubmitText} from './styles';
-import Picker from '../../components/Picker';
+
+// import Picker from '../../components/Picker'
 
 export default function New() {
   const navigation = useNavigation();
